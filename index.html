@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="no-js">
+ 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+ 
+<body>
+ 
+    <div id="hello">HELOOOO</div>
+    <input type="text" name="distans" id="distance" placeholder="Distance" />
+    <input type="text" name="distans" id="time" placeholder="time" />
+    <input type="text" name="distans" id="pace" placeholder="pace" />
+    <button onclick="nappula()" id="nappula">NAPPULA</button>
+    <script>
+        $(document).ready(function () {
+            console.log("ready!");
+        });
+        console.log("Funkar");
+        $("#hello").html("Hello")
+        function nappula() {
+            console.log("NAPPULA pressed");
+            var distance = $("#distance").val(); // kilometers
+            var time = $("#time").val(); //in minutes
+            //var pace = time / distance;
+            //$("#pace").val(pace);
+            var pace = $("#pace").val();
+
+            if ($("#distance").is(":empty")) console.log("distance tom");
+            console.log("distance" + distance)
+            console.log("pace" + pace)
+            console.log("time" + time)
+         if (distance && pace && !time)
+            console.log("distance finns")
+          //  console.log("pace finns")
+           // console.log("time")
+        }
+
+    </script>
+</body>
+ 
+</html>
